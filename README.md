@@ -15,6 +15,14 @@ App Android para escanear códigos QR y de barra y comparar con una base de dato
 Sistema web para agendamiento de turnos, historial de clientes y control de caja.
 [Ver proyecto](https://github.com/hernan-ferreira996/sistema-peluqueria)
 
+### 🏅 Certificados
+
+#### 📄 Curso Flutter - Udemy  
+![Certificado Flutter](certificados/certificado_flutter_udemy.png)
+
+#### 📄 Curso Laravel - Coursera  
+![Certificado Laravel](certificados/certificado_laravel_coursera.png)
+
 ---
 
 ## 🛠️ Tecnologías
