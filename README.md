@@ -1,7 +1,10 @@
 # 👨‍💻 Hernán Ferreira
 
 **Desarrollador de Software - Paraguay**  
-Apasionado por la tecnología, desarrollo de sistemas a medida, páginas web, apps móviles y automatización.
+Profesional en desarrollo de software enfocado en brindar soluciones reales y escalables.
+Diseño sistemas personalizados, sitios web y aplicaciones móviles adaptadas a cada negocio.
+Trabajo con compromiso, claridad y soporte constante en cada etapa del proyecto.
+Mi objetivo es generar confianza a través de tecnología funcional y resultados concretos
 
 ---
 
