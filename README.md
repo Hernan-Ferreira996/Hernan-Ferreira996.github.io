@@ -17,11 +17,9 @@ Sistema web para agendamiento de turnos, historial de clientes y control de caja
 
 ### 🏅 Certificados
 
-#### 📄 Curso Flutter - Udemy  
-![Certificado Flutter](certificados/Udemy_POWERBI.pdf)
+- Curso Power BI - Udemy ![Certificado Flutter](certificados/Udemy_POWERBI.pdf)
 
-#### 📄 Curso Laravel - Coursera  
-![Certificado Laravel](certificados/certificado_laravel_coursera.png)
+- Curso Seguridad de la Informacion - Coursera ![Certificado Laravel](certificados/Seguridadinformacion.pdf)
 
 ---
 
