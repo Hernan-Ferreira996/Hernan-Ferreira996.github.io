@@ -15,7 +15,7 @@ App Android para escanear códigos QR y de barra y comparar con una base de dato
 
 - Curso Power BI - Udemy (certificados/POWERBI.pdf)
 - Curso Seguridad de la Informacion - Linkedin Learning (certificados/Seguridadinformacion.pdf)
-- Curso AWS - Linkedin Learning (certificados/IntroduccionAWS.pdf)
+- Curso AWS - Linkedin Learning !(certificados/IntroduccionAWS.pdf)
 
 ## 🛠️ Tecnologías Conocidas
 
