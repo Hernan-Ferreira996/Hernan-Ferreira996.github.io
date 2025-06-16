@@ -11,8 +11,8 @@ Mi objetivo es generar confianza a través de tecnología funcional y resultados
 ## 🚀 Proyectos Realizados
 
 ### 📦 Sistema Farmaceutico
-Sistema web parafarmacia
-[proyecto](https://github.com/hernan-ferreira996/inventario-qr)
+Sistema web para farmacia
+[proyectoFarmacia](Laravel/sistemafarmacia)
 
 ### 🏅 Certificados
 
