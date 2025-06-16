@@ -10,8 +10,9 @@ Mi objetivo es generar confianza a través de tecnología funcional y resultados
 
 ## 🚀 Proyectos Realizados
 
-### Laravel
-[Farmacia](Laravel/sistemafarmacia)
+### Laravel ![image](https://github.com/user-attachments/assets/685c88f5-f0f5-45a0-a91b-397409d33409)
+
+- Proyecto para Farmacia [Farmacia](Laravel/sistemafarmacia)
 
 ### 🏅 Certificados
 
