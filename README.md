@@ -8,11 +8,11 @@ Mi objetivo es generar confianza a través de tecnología funcional y resultados
 
 ---
 
-## 🚀 Proyectos Destacados
+## 🚀 Proyectos Realizados
 
-### 📦 Inventario QR Android
-App Android para escanear códigos QR y de barra y comparar con una base de datos local.
-[Ver proyecto](https://github.com/hernan-ferreira996/inventario-qr)
+### 📦 Sistema Farmaceutico
+Sistema web parafarmacia
+[proyecto](https://github.com/hernan-ferreira996/inventario-qr)
 
 ### 🏅 Certificados
 
@@ -27,8 +27,14 @@ App Android para escanear códigos QR y de barra y comparar con una base de dato
 
 ---
 
-## 📫 Contacto
+## 📫 Contacto primario
 
-📧 desatec25@gmail.com  / hernan.ferreira.981@gmail.com
-📱 (0991) 385-981  / (0974) 223-003
+📧 hernan.ferreira.996@gmail.com
+📱 (0974) 223-003
 🌐 [hernan-ferreira996.github.io](https://hernan-ferreira996.github.io)
+
+## 📫 Contacto secundario
+
+📱 (0991) 385-981
+🌐 [hernan-ferreira996.github.io](https://hernan-ferreira996.github.io)
+📧 desatec25@gmail.com  / hernan.ferreira.981@gmail.com
