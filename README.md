@@ -17,9 +17,9 @@ Sistema web parafarmacia
 ### 🏅 Certificados
 
 - Curso Udemy [POWER BI](certificados/Udemy_POWERBI.pdf)
-- Curso Linkedin Learning [Seguridad de la Informacion](certificados/Seguridadinformacion.pdf)
-- Curso Linkedin Learning [AWS](certificados/IntroduccionAWS.pdf)
-- Curso Linkedin Learning [INTRODUCCIONAWS](certificados/introduccionaAWS.pdf)
+- Curso Linkedin [Seguridad de la Informacion](certificados/Seguridadinformacion.pdf)
+- Curso Linkedin [AWS](certificados/IntroduccionAWS.pdf)
+- Curso Udemy [INTRODUCCIONAWS](certificados/Desarrolloweb.pdf)
 
 ## 🛠️ Tecnologías Conocidas
 
