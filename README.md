@@ -17,10 +17,10 @@ Mi objetivo es generar confianza a través de tecnología funcional y resultados
 
 ### 🏅 Certificados
 
-- Curso Udemy [POWER BI](certificados/Udemy_POWERBI.pdf)
+- Curso Udemy [Desarrollo Frontend](certificados/Desarrolloweb.pdf)
 - Curso Linkedin [Seguridad de la Informacion](certificados/Seguridadinformacion.pdf)
 - Curso Linkedin [AWS](certificados/IntroduccionAWS.pdf)
-- Curso Udemy [INTRODUCCIONAWS](certificados/Desarrolloweb.pdf)
+- Curso Udemy [Python](certificados/Pythonavanzado.pdf)
 
 ## 🛠️ Tecnologías Conocidas
 
