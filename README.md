@@ -20,11 +20,11 @@ Mi objetivo es generar confianza a través de tecnología funcional y resultados
 - Curso Udemy [Desarrollo Frontend](certificados/Desarrolloweb.pdf)
 - Curso Linkedin [Seguridad de la Informacion](certificados/Seguridadinformacion.pdf)
 - Curso Linkedin [AWS](certificados/IntroduccionAWS.pdf)
-- Curso Udemy [Python](certificados/Pythonavanzado.pdf)
+- Curso Udemy Python [Python](certificados/Pythonavanzado.pdf)
 
 ## 🛠️ Tecnologías Conocidas
 
-`Java` `Flutter` `Laravel` `PHP` `MySQL` `HTML/CSS` `JavaScript` `Git` `GitHub` `Python` 
+`Java` `Flutter` `Laravel` `PHP` `SQL` `HTML/CSS` `JavaScript` `Git` `GitHub` `Python` 
 
 ---
 
