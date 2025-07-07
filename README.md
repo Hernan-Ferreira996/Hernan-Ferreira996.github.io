@@ -1,17 +1,13 @@
 # 👨‍💻 Hernán Ferreira
 
 **Desarrollador de Software - Paraguay**  
-Profesional en desarrollo de software enfocado en brindar soluciones reales y escalables.
-Diseño sistemas personalizados, sitios web y aplicaciones móviles adaptadas a cada negocio.
-Trabajo con compromiso, claridad y soporte constante en cada etapa del proyecto.
-Mi objetivo es generar confianza a través de tecnología funcional y resultados concretos
+Combino el análisis funcional y técnico de sistemas con el desarrollo completo de soluciones web y móviles, integrando documentación, arquitectura y diseño UX/UI eficaz. 
 
 ---
 
 ## 🚀 Proyectos Realizados
 
-<h3>Laravel</h3>
-<img src="https://github.com/user-attachments/assets/685c88f5-f0f5-45a0-a91b-397409d33409" alt="Laravel" width="150">
+<h3>Paginas sencillas Funcionales</h3>
 
 - Proyecto Inventario [Inventario](Laravel/Laravel/inventario)
 
