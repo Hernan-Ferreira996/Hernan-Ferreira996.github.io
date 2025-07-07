@@ -11,7 +11,6 @@ Combino el análisis funcional y técnico de sistemas con el desarrollo completo
 - ## 🌦️ Proyecto: Clima
 
 [Ver archivos del proyecto](https://github.com/Hernan-Ferreira996/paginaswebfuncionales/tree/main/clima)
-[Ver página funcional](https://Hernan-Ferreira996.github.io/paginaswebfuncionales/clima/)
 
 ### 🏅 Certificados
 
