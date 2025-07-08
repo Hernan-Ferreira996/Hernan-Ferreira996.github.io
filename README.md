@@ -5,13 +5,6 @@ Combino el análisis funcional y técnico de sistemas con el desarrollo completo
 
 ---
 
-## 🚀 Proyectos Realizados
-
-<h3>Paginas sencillas Funcionales</h3>
-- ## 🌦️ Proyecto: Clima
-
-[Ver archivos del proyecto](https://github.com/Hernan-Ferreira996/paginaswebfuncionales/tree/main/clima)
-
 ### 🏅 Certificados
 
 - Curso Udemy [Desarrollo Frontend](certificados/Desarrolloweb.pdf)
