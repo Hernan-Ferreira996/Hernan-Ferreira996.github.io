@@ -1,128 +1,119 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hernán Ferreira - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hernán Ferreira — Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
+    :root{
+      --bg:#f7f7f8;
+      --surface:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --brand:#1d3557;
+      --brand-2:#457b9d;
+      --accent:#e63946;
+      --border:#e5e7eb;
+      --chip-bg:#eef2f7;
     }
-    h1, h2, h3 {
-      color: #e63946;
+
+    body{
+      margin:0;
+      background:
+        linear-gradient(180deg, #f5f7fb 0%, #f7f7f8 30%, #f7f7f8 100%),
+        radial-gradient(1200px 420px at 50% -220px, rgba(29,53,87,.06), transparent),
+        radial-gradient(900px 360px at 12% -120px, rgba(69,123,157,.06), transparent),
+        radial-gradient(900px 360px at 88% -120px, rgba(230,57,70,.05), transparent);
+      background-attachment: fixed;
+      font-family: system-ui, sans-serif;
+      color:var(--text);
+      line-height:1.55;
     }
-    a {
-      color: #1d3557;
-      text-decoration: none;
+
+    .container{max-width:900px;margin:32px auto;padding:0 20px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+
+    h1{margin:0;font-size:32px;color:var(--brand)}
+    h2{margin:28px 0 12px 0;color:var(--brand);font-size:22px}
+    h3{margin:20px 0 10px;font-size:18px;color:var(--brand-2)}
+
+    .summary{margin:10px 0;color:var(--muted)}
+
+    .project{
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:16px;
+      margin-bottom:16px;
+      background:#fff;
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    code {
-      background: #eee;
-      padding: 3px 7px;
-      border-radius: 5px;
-      margin: 3px;
-      display: inline-block;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .cert-list li {
-      margin-bottom: 6px;
-    }
+    .project strong{font-size:16px;color:var(--brand)}
+    .project-desc{margin:6px 0;color:var(--muted)}
+    .project a{color:var(--brand-2);text-decoration:none;font-weight:500}
+    .project a:hover{text-decoration:underline}
+
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{padding:6px 10px;background:var(--chip-bg);border:1px solid var(--border);border-radius:999px;font-size:13px}
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card">
+      <h1>Hernán Ferreira</h1>
+      <p class="summary">Software Developer · Paraguay</p>
+      <p>I combine functional analysis and full‑stack development to deliver end‑to‑end web and mobile solutions, with attention to documentation, architecture, and clear, efficient UX/UI design.</p>
 
-  <h1>👨‍💻 Hernán Ferreira</h1>
-  <p><strong>Desarrollador de Software - Paraguay</strong></p>
-  <p>
-    Combino el análisis funcional y técnico de sistemas con el desarrollo completo de soluciones web y móviles, integrando documentación, arquitectura y diseño UX/UI eficaz.
-  </p>
+      <h2>Real Projects</h2>
 
-  <hr>
+      <div class="project">
+        <strong>🌦️ Weather App</strong>
+        <p class="project-desc"><strong>Challenge:</strong> Build a simple app to check real‑time weather.<br>
+        <strong>Solution:</strong> Developed a web app that consumes weather APIs and displays clear information to the user.<br>
+        <strong>Stack:</strong> HTML, CSS, JavaScript.<br>
+        <strong>Learned:</strong> Working with APIs and presenting dynamic data.<br>
+        <strong>Next step:</strong> Add automatic geolocation.</p>
+        <a href="https://hernan-ferreira996.github.io/paginaswebfuncionales/clima/" target="_blank">Live demo</a>
+      </div>
 
-<div class="section">
-  <h2>🚀 Proyectos Realizados</h2>
+      <div class="project">
+        <strong>📄 Interactive CV</strong>
+        <p class="project-desc"><strong>Challenge:</strong> Turn a traditional CV into a dynamic format.<br>
+        <strong>Solution:</strong> Built a responsive, interactive site to present personal and professional information.<br>
+        <strong>Stack:</strong> HTML, CSS, JavaScript.<br>
+        <strong>Learned:</strong> Improving presentation and accessibility.<br>
+        <strong>Next step:</strong> Add multilingual support.</p>
+        <a href="https://hernan-ferreira996.github.io/paginaswebfuncionales/cvinteractivo/" target="_blank">Live demo</a>
+      </div>
 
-  <h3>Páginas sencillas funcionales</h3>
-  <ul>
-    <li>
-      🌦️ <strong>Proyecto: Clima</strong> –
-      <a href="https://hernan-ferreira996.github.io/paginaswebfuncionales/clima/" target="_blank">
-        Ver sitio funcionando
-      </a>
-    </li>
-    <li>
-      📄 <strong>CV Interactivo</strong> –
-      <a href="https://hernan-ferreira996.github.io/paginaswebfuncionales/cvinteractivo/" target="_blank">
-        Ver sitio funcionando
-      </a>
-    </li>
-    <li>
-      📬 <strong>Validación de Formulario</strong> –
-      <a href="https://hernan-ferreira996.github.io/paginaswebfuncionales/validarcontacto/" target="_blank">
-        Ver sitio funcionando
-      </a>
-    </li>
-  </ul>
+      <h2>Technical Variety</h2>
+      <p>I have worked with different stacks covering <strong>frontend</strong>, <strong>backend</strong>, <strong>databases</strong>, and <strong>cloud deployment</strong>, which allows me to adapt to diverse contexts.</p>
 
-  <h3>⚛️ Proyectos en React JS</h3>
-  <ul>
-    <li>
-      🧭 <strong>Convertidor de Monedas</strong> –
-      <a href="https://tusitio-react.netlify.app/" target="_blank">
-        Ver sitio funcionando
-      </a>
-    </li>
-  </ul>
-</div>
-  <div class="section">
-    <h2>🏅 Certificados</h2>
-    <ul class="cert-list">
-      <li>Curso Udemy <a href="certificados/Desarrolloweb.pdf">Desarrollo Frontend</a></li>
-      <li>Curso Linkedin <a href="certificados/Seguridadinformacion.pdf">Seguridad de la Información</a></li>
-      <li>Curso Linkedin <a href="certificados/IntroduccionAWS.pdf">AWS</a></li>
-      <li>Curso Udemy <a href="certificados/Pythonavanzado.pdf">Python</a></li>
-    </ul>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Udemy — <a href="certificados/Desarrolloweb.pdf">Frontend Development</a></li>
+        <li>LinkedIn — <a href="certificados/Seguridadinformacion.pdf">Information Security</a></li>
+        <li>LinkedIn — <a href="certificados/IntroduccionAWS.pdf">Introduction to AWS</a></li>
+        <li>Udemy — <a href="certificados/Pythonavanzado.pdf">Advanced Python</a></li>
+      </ul>
+
+      <h2>Tech Skills</h2>
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">SQL</span>
+        <span class="chip">HTML/CSS</span>
+        <span class="chip">Node JS</span>
+        <span class="chip">Git</span>
+        <span class="chip">GitHub / Git</span>
+        <span class="chip">Python</span>
+      </div>
+
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:hernan.ferreira.996@gmail.com">hernan.ferreira.996@gmail.com</a></li>
+        <li><a href="tel:+595974223003">(+595) 974 223‑003</a></li>
+        <li><a href="https://hernan-ferreira996.github.io" target="_blank">hernan-ferreira996.github.io</a></li>
+        <li>GitHub: <a href="https://github.com/hernan-ferreira996" target="_blank">@hernan-ferreira996</a></li>
+      </ul>
+    </div>
   </div>
-
-  <div class="section">
-    <h2>🛠️ Tecnologías Conocidas</h2>
-    <code>Java</code>
-    <code>Flutter</code>
-    <code>Laravel</code>
-    <code>PHP</code>
-    <code>SQL</code>
-    <code>HTML/CSS</code>
-    <code>JavaScript</code>
-    <code>Git</code>
-    <code>GitHub</code>
-    <code>Python</code>
-    <code>Iracle</code>
-  </div>
-
-  <div class="section">
-    <h2>📫 Contacto primario</h2>
-    <ul>
-      <li>📧 hernan.ferreira.996@gmail.com</li>
-      <li>📱 (0974) 223-003</li>
-      <li>🌐 <a href="https://hernan-ferreira996.github.io">hernan-ferreira996.github.io</a></li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>📫 Contacto secundario</h2>
-    <ul>
-      <li>📱 (0991) 385-981</li>
-      <li>🌐 <a href="https://hernan-ferreira996.github.io">hernan-ferreira996.github.io</a></li>
-      <li>📧 desatec25@gmail.com / hernan.ferreira.981@gmail.com</li>
-    </ul>
-  </div>
-
 </body>
 </html>
