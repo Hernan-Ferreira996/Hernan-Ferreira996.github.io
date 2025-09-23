@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ña Mandi'o — Sabores Paraguayos</title>
+    <meta name="description" content="Restaurante de comida paraguaya: sopa paraguaya, chipa, mbejú, vorí vorí, asado a la parrilla y más. Pedí online o reservá tu mesa." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#0b0b0b; --fg:#f6f3ee; --muted:#cfc7bc; --brand:#b61b1b; --brand2:#f6b100;
+            --card:#151515; --sep:#262626; --ok:#0db27f;
+        }
+        *{box-sizing:border-box}
+        html,body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--fg); background:var(--bg);}
+        a{color:inherit; text-decoration:none}
+        img{max-width:100%; display:block}
+        .container{width:min(1100px,90%); margin:auto}
+        header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(120%) blur(8px); background:rgba(11,11,11,.7); border-bottom:1px solid var(--sep)}
+        .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+        .brand{display:flex; gap:10px; align-items:center}
+        .brand .logo{width:38px; height:38px; background:linear-gradient(135deg,var(--brand),var(--brand2)); border-radius:10px}
+        .brand h1{font:800 18px/1 Inter, sans-serif; letter-spacing:.5px}
+        nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
+        nav a{opacity:.9}
+        nav a.active{color:var(--brand2)}
+        .btn{display:inline-block; padding:10px 16px; border:1px solid var(--sep); border-radius:12px; transition:.2s; background:#121212}
+        .btn:hover{transform:translateY(-1px); border-color:var(--muted)}
+        .primary{background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#111; border:none; font-weight:700}
+
+        /* HERO */
+        .hero{position:relative; isolation:isolate}
+        .hero .bg{
+            position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat; filter:brightness(.45);
+            z-index:-1;
+        }
+        .hero .container{padding:96px 0 80px}
+        .overline{letter-spacing:.25em; text-transform:uppercase; color:var(--brand2); font-weight:700; font-size:12px}
+        .title{font:800 clamp(32px,6vw,64px)/1.05 'Playfair Display',serif; margin:10px 0 10px}
+        .subtitle{max-width:680px; color:var(--muted); margin-bottom:24px}
+        .cta{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+
+        /* FEATURES */
+        .features{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px}
+        .feature{background:rgba(255,255,255,.06); border:1px solid var(--sep); padding:14px; border-radius:14px}
+        .feature b{color:var(--brand2)}
+
+        /* SECTION */
+        section{padding:56px 0; border-top:1px solid var(--sep)}
+        section h2{font:800 28px/1.2 Inter; margin:0 0 6px}
+        section p.lead{color:var(--muted); margin:0 0 18px}
+
+        /* MENU */
+        .filters{display:flex; gap:10px; flex-wrap:wrap; margin:16px 0 24px}
+        .filters .chip{padding:8px 12px; border:1px solid var(--sep); border-radius:999px; cursor:pointer; background:#141414}
+        .filters .chip.active{background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#111; border:none}
+
+        .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+        .card{background:var(--card); border:1px solid var(--sep); border-radius:16px; overflow:hidden; display:flex; flex-direction:column}
+        .card .body{padding:14px}
+        .card h3{margin:0 0 6px; font-size:18px}
+        .price{margin-left:auto; font-weight:800; color:var(--brand2)}
+        .badge{font-size:12px; padding:4px 8px; border-radius:999px; border:1px solid var(--sep); color:var(--muted)}
+
+        /* DESTACADOS */
+        .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:20px}
+        .highlight{position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--sep)}
+        .highlight img{height:100%; width:100%; object-fit:cover}
+        .highlight .cap{position:absolute; inset:auto 0 0 0; padding:18px; background:linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));}
+
+        /* TESTIMONIOS */
+        .testis{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+        .testi{background:var(--card); border:1px solid var(--sep); padding:16px; border-radius:14px}
+
+        /* FOOTER */
+        footer{padding:26px 0; border-top:1px solid var(--sep); color:var(--muted)}
+
+        /* LIGHTBOX */
+        .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:50}
+        .lightbox img{max-width:min(90vw,1100px); max-height:85vh; border-radius:12px}
+
+        /* WHATSAPP */
+        .wa{position:fixed; right:16px; bottom:16px; background:#25D366; color:#111; border-radius:999px; padding:12px 16px; font-weight:800; z-index:60}
+
+        /* RESPONSIVE */
+        @media (max-width:960px){
+            .cards{grid-template-columns:1fr 1fr}
+            .features{grid-template-columns:1fr 1fr}
+            .grid-2{grid-template-columns:1fr}
+            .testis{grid-template-columns:1fr}
+        }
+        @media (max-width:640px){
+            nav ul{display:none}
+            .cards{grid-template-columns:1fr}
+            .features{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <h1>Ña Mandi'o</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#menu" class="link">Menú</a></li>
+                <li><a href="#destacados" class="link">Destacados</a></li>
+                <li><a href="#galeria" class="link">Galería</a></li>
+                <li><a href="#contacto" class="link">Contacto</a></li>
+            </ul>
+        </nav>
+        <a class="btn primary" href="#contacto">Reservar</a>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="bg" role="img" aria-label="Mesa con platos típicos"></div>
+    <div class="container">
+        <div class="overline">Cocina tradicional paraguaya</div>
+        <h2 class="title">Sabores auténticos, hechos a fuego lento</h2>
+        <p class="subtitle">Sopa paraguaya al horno de leña, chipa crocante, vorí vorí con caldo casero y cortes a la parrilla. Ingredientes locales y recetas de familia.</p>
+        <div class="cta">
+            <a class="btn primary" href="#menu">Ver menú</a>
+            <a class="btn" href="#destacados">Especiales de la semana</a>
+        </div>
+        <div class="features">
+            <div class="feature">⏱️ <b>Horario</b><br> Lun–Sáb 11:30–23:00</div>
+            <div class="feature">📍 <b>Asunción</b><br> Av. Mariscal López 1234</div>
+            <div class="feature">🧾 <b>Factura</b><br> Emitimos factura legal</div>
+        </div>
+    </div>
+</section>
+
+<section id="menu" class="container">
+    <h2>Menú</h2>
+    <p class="lead">Elegí por categoría o explorá todo.</p>
+    <div class="filters" role="tablist">
+        <button class="chip active" data-filter="all">Todo</button>
+        <button class="chip" data-filter="horno">Horno</button>
+        <button class="chip" data-filter="parrilla">Parrilla</button>
+        <button class="chip" data-filter="sopas">Sopas</button>
+        <button class="chip" data-filter="dulces">Dulces</button>
+    </div>
+
+    <div class="cards" id="cards">
+        <!-- Horno -->
+        <article class="card" data-cat="horno">
+            <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?q=80&w=1600&auto=format&fit=crop" alt="Sopa paraguaya">
+            <div class="body">
+                <div style="display:flex; gap:8px; align-items:center">
+                    <h3>Sopa paraguaya</h3> <span class="price">35.000 Gs</span>
+                </div>
+                <div class="badge">Horno</div>
+                <p class="lead">Harina de maíz, queso paraguay y cebolla caramelizada.</p>
+            </div>
+        </article>
+        <article class="card" data-cat="horno">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Chipa">
+            <div class="body">
+                <div style="display:flex; gap:8px; align-items:center">
+                    <h3>Chipa tradicional</h3> <span class="price">25.000 Gs</span>
+                </div>
+                <div class="badge">Horno</div>
+                <p class="lead">Crujiente por fuera, suave por dentro, con queso.</p>
+            </div>
+        </article>
+
+        <!-- Sopas -->
+        <article class="card" data-cat="sopas">
+            <img src="https://images.unsplash.com/photo-1512058454905-6b7a041f9320?q=80&w=1600&auto=format&fit=crop" alt="Vorí vorí">
+            <div class="body">
+                <div style="display:flex; gap:8px; align-items:center">
+                    <h3>Vorí vorí</h3> <span class="price">32.000 Gs</span>
+                </div>
+                <div class="badge">Sopa</div>
+                <p class="lead">Caldo casero con bolitas de harina de maíz y queso.</p>
+            </div>
+        </article>
+
+        <!-- Parrilla -->
+        <article class="card" data-cat="parrilla">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop" alt="Asado a la parrilla">
+            <div class="body">
+                <div style="display:flex; gap:8px; align-items:center">
+                    <h3>Asado a la parrilla</h3> <span class="price">65.000 Gs</span>
+                </div>
+                <div class="badge">Parrilla</div>
+                <p class="lead">Cortes seleccionados al carbón, chimichurri de la casa.</p>
+            </div>
+        </article>
+
+        <article class="card" data-cat="dulces">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600&auto=format&fit=crop" alt="Kivevé">
+            <div class="body">
+                <div style="display:flex; gap:8px; align-items:center">
+                    <h3>Kivevé</h3> <span class="price">22.000 Gs</span>
+                </div>
+                <div class="badge">Dulce</div>
+                <p class="lead">Zapallo, harina de maíz y queso paraguay en crema tibia.</p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="destacados" class="container">
+    <h2>Destacados</h2>
+    <p class="lead">Nuestros platos más pedidos de la semana.</p>
+    <div class="grid-2">
+        <figure class="highlight">
+            <img src="https://images.unsplash.com/photo-1615850863296-87c816f994d6?q=80&w=1800&auto=format&fit=crop" alt="Mbejú dorado">
+            <figcaption class="cap">Mbejú dorado — crocante por fuera, tierno por dentro.</figcaption>
+        </figure>
+        <figure class="highlight">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1800&auto=format&fit=crop" alt="Sopa so'o">
+            <figcaption class="cap">Sopa so'o — sopa paraguaya con carne jugosa.</figcaption>
+        </figure>
+    </div>
+</section>
+
+<section id="galeria" class="container">
+    <h2>Galería</h2>
+    <p class="lead">Un vistazo a nuestra cocina y mesas.</p>
+    <div class="cards" id="gal">
+        <a class="card" href="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1800&auto=format&fit=crop" data-lightbox>
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1200&auto=format&fit=crop" alt="Parrilla encendida">
+        </a>
+        <a class="card" href="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1800&auto=format&fit=crop" data-lightbox>
+            <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?q=80&w=1200&auto=format&fit=crop" alt="Mesa servida">
+        </a>
+        <a class="card" href="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1800&auto=format&fit=crop" data-lightbox>
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop" alt="Detalle de servicio">
+        </a>
+    </div>
+</section>
+
+<section id="contacto" class="container">
+    <h2>Contacto & Reservas</h2>
+    <p class="lead">Escribinos por WhatsApp o completá el formulario.</p>
+    <div class="grid-2">
+        <form class="card" style="padding:16px" onsubmit="contacto(event)">
+            <label>Nombre<br><input required name="nombre" class="input" /></label><br><br>
+            <label>Teléfono / WhatsApp<br><input required name="tel" class="input" /></label><br><br>
+            <label>Fecha y hora<br><input type="datetime-local" name="fh" class="input" /></label><br><br>
+            <label>Mensaje<br><textarea name="msg" rows="4" class="input"></textarea></label><br>
+            <button class="btn primary" type="submit">Reservar</button>
+        </form>
+        <div class="card" style="padding:16px">
+            <h3>Ubicación</h3>
+            <p>Av. Mariscal López 1234, Asunción</p>
+            <iframe title="Mapa" src="https://maps.google.com/maps?q=Asuncion%20Paraguay&t=&z=13&ie=UTF8&iwloc=&output=embed" style="width:100%; height:260px; border:0; border-radius:12px"></iframe>
+            <p style="margin-top:10px; color:var(--muted)">Lun–Sáb 11:30–23:00 · Dom 12:00–16:00</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <small>© <span id="yr"></span> Ña Mandi'o · Sabores Paraguayos</small>
+        <small>Hecho con ♥ en Paraguay</small>
+    </div>
+</footer>
+
+<a class="wa" href="https://wa.me/595971000000?text=Hola%20Ña%20Mandi'o%2C%20quiero%20reservar" target="_blank" rel="noopener">WhatsApp</a>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <img alt="Vista ampliada" />
+</div>
+
+<script>
+    // Año
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Smooth scroll + active nav
+    const links = document.querySelectorAll('a.link');
+    links.forEach(a=>a.addEventListener('click',e=>{
+        e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    }));
+    const obs = new IntersectionObserver(entries=>{
+        entries.forEach(en=>{
+            const id = en.target.getAttribute('id');
+            const nav = document.querySelector(`a[href="#${id}"]`);
+            if(nav) nav.classList.toggle('active', en.isIntersecting);
+        })
+    },{threshold:.4});
+    document.querySelectorAll('section.container').forEach(s=>obs.observe(s));
+
+    // Filtros de menú
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('.card[data-cat]');
+    chips.forEach(ch=> ch.addEventListener('click',()=>{
+        chips.forEach(c=>c.classList.remove('active')); ch.classList.add('active');
+        const f = ch.dataset.filter;
+        cards.forEach(cd=>{ cd.style.display = (f==='all' || cd.dataset.cat===f)?'flex':'none'; });
+    }));
+
+    // Lightbox simple
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('[data-lightbox]').forEach(a=>{
+        a.addEventListener('click', e=>{
+            e.preventDefault(); lbImg.src = a.getAttribute('href'); lb.style.display='flex'; lb.setAttribute('aria-hidden','false');
+        })
+    });
+    lb.addEventListener('click', ()=>{ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); lbImg.removeAttribute('src'); });
+
+    // Formulario (simulado)
+    function contacto(e){
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        const msg = `Reserva de ${data.nombre}%0A${data.tel}%0A${data.fh||''}%0A${(data.msg||'').slice(0,200)}`;
+        window.open(`https://wa.me/595971000000?text=${msg}`,'_blank');
+    }
+    window.contacto = contacto;
+</script>
+</body>
+</html>
